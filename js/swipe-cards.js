@@ -11,9 +11,11 @@
     SwipeCards.prototype = {
         startPoint: null,
         activeEl: null,
+        offset: null,
         clear: function () {
             this.startPoint = null;
             this.activeEl = null;
+            this.offset = null;
         },
         isActiveElement: function (el) {
             return this.container.firstElementChild.isEqualNode(el);
@@ -26,12 +28,22 @@
             var onMoveStart = this.onMoveStart,
                 onMoveUpdate = this.onMoveUpdate;
 
+            var isTouchDevice = !!('ontouchstart' in window);
+
+            this.isTouch = isTouchDevice;
+
+            var events = {
+                start: isTouchDevice ? 'touchstart' : 'mousedown',
+                move: isTouchDevice ? 'touchmove' : 'mousemove',
+                end: isTouchDevice ? 'touchend' : 'mouseup'
+            };
+
             function addEventsForItem (item) {
-                item.addEventListener('mousedown', this.onMoveStart.bind(this));
-                item.addEventListener('mousemove', this.onMoveUpdate.bind(this));
+                item.addEventListener(events.start, this.onMoveStart.bind(this));
+                item.addEventListener(events.move, this.onMoveUpdate.bind(this));
             }
             itemsArr.forEach(addEventsForItem.bind(this));
-            document.addEventListener('mouseup', this.onMoveEnd.bind(this));
+            document.addEventListener(events.end, this.onMoveEnd.bind(this));
             this.container.addEventListener('DOMNodeInserted', function (e) {
                 addEventsForItem.bind(this)(e.target);
             }.bind(this));
@@ -42,26 +54,27 @@
                 y: e.clientY - this.startPoint.y
             };
         },
-        getTransform: function (e) {
-            var offset = this.getOffset(e);
+        getTransformByOffset: function (offset) {
             return 'translate3d(' + [offset.x + 'px', offset.y + 'px', 0].join(',') + ')';
+        },
+        getEventPoint: function (e) {
+            return (e.touches ? e.touches[0] : e);
         },
         onMoveStart: function (e) {
             console.log('onMoveStart', e);
-            if (!this.isActiveElement(e.target)) return;
-            console.log('found active el', e.target);
+            var point = this.getEventPoint(e);
+            if (!this.isActiveElement(point.target)) return;
             this.startPoint = {
-                x: e.clientX,
-                y: e.clientY
+                x: point.clientX,
+                y: point.clientY
             };
-            this.activeEl = e.target;
+            this.activeEl = point.target;
             this.activeEl.classList.add('is-active');
         },
         onMoveEnd: function (e) {
             console.log('onMoveEnd', e);
             if (!this.startPoint) return;
-
-            var offset = this.getOffset(e);
+            var offset = this.offset;
             var containerWidth = this.container.clientWidth;
 
             this.activeEl.classList.remove('is-active'); // to enable transitions animations
@@ -76,7 +89,8 @@
         },
         onMoveUpdate: function (e) {
             if (!this.startPoint) return;
-            this.activeEl.style.transform = this.activeEl.style.webkitTransform = this.getTransform(e);
+            this.offset = this.getOffset(this.getEventPoint(e));
+            this.activeEl.style.transform = this.activeEl.style.webkitTransform = this.getTransformByOffset(this.offset);
             console.log('update');
         }
     };
