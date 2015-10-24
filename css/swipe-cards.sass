@@ -5,6 +5,7 @@ body
   background-color: #2f3845
   +f-sserif
   padding: 20px
+  overflow: hidden
 button,input,textarea
   +f-sserif
 .title
@@ -66,15 +67,19 @@ button,input,textarea
     border-radius: 4px
     z-index: -1
     transform-origin: 50% 0%
+    -webkit-transform-origin: 50% 0%
 
 
     transition: transform .6s ease-in
+    -webkit-transition: -webkit-transform .6s ease-in
+
     $max-count: 10
     $offset: -10px
     =n-element($i, $max-count, $offset)
       $delim: $max-count - $i - 1
       $scale: 1 - $delim / ($max-count * 1.57)
       transform: scale3d($scale, $scale,1) translate3d(0, $offset * $delim , 0)
+      -webkit-transform: scale3d($scale, $scale,1) translate3d(0, $offset * $delim , 0)
 
     // for items what are out of range
     +n-element(1, $max-count, $offset)
@@ -89,6 +94,7 @@ button,input,textarea
 
       &.is-active
         transition: none
+        -webkit-transition: none
 
     //&:nth-child(4n)
     //  transform: scale3d(.7,.7,1) translate3d(0, -24px, 0)

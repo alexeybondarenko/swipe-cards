@@ -24,14 +24,12 @@
             var $items = this.container.querySelectorAll('.swipe-cards__item');
             var itemsArr = Array.prototype.slice.call($items, 0);
 
-            var isTouchDevice = !!('ontouchstart' in window);
-
-            this.isTouch = isTouchDevice;
+            this.isTouch = !!('ontouchstart' in window);
 
             var events = {
-                start: isTouchDevice ? 'touchstart' : 'mousedown',
-                move: isTouchDevice ? 'touchmove' : 'mousemove',
-                end: isTouchDevice ? 'touchend' : 'mouseup'
+                start: this.isTouch ? 'touchstart' : 'mousedown',
+                move: this.isTouch ? 'touchmove' : 'mousemove',
+                end: this.isTouch ? 'touchend' : 'mouseup'
             };
 
             function addEventsForItem (item) {
@@ -60,6 +58,8 @@
             console.log('onMoveStart', e);
             var point = this.getEventPoint(e);
             if (!this.isActiveElement(point.target)) return;
+            e.stopPropagation();
+            e.preventDefault();
             this.startPoint = {
                 x: point.clientX,
                 y: point.clientY
@@ -70,6 +70,8 @@
         onMoveEnd: function (e) {
             console.log('onMoveEnd', e);
             if (!this.startPoint) return;
+            e.stopPropagation();
+            e.preventDefault();
             var offset = this.offset;
             var containerWidth = this.container.clientWidth;
 
@@ -79,7 +81,7 @@
                 this.activeEl.parentNode.removeChild(this.activeEl);
             } else {
                 // revert back
-                this.activeEl.style.transform = null;
+                this.activeEl.style.transform = this.activeEl.style.webkitTransform = null;
             }
             this.clear();
         },

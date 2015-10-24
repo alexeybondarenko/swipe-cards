@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Swipe Cards</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="css/swipe-cards.css"/>
@@ -43,15 +44,17 @@
         var cards = document.querySelector('.swipe-cards');
         new SwipeCards(cards);
 
-        document.querySelector('.btn-add').onclick = function () {
+        var isTouch = !!('ontouchstart' in window);
+
+        document.querySelector('.btn-add').addEventListener(isTouch ? 'touchend' : 'click', function () {
             var newCard = document.createElement('div');
             newCard.classList.add('swipe-cards__item');
             var container = cards.firstElementChild;
             container.insertBefore(newCard, container.firstElementChild);
-        };
-        document.querySelector('.btn-delete').onclick = function () {
+        });
+        document.querySelector('.btn-delete').addEventListener(isTouch ? 'touchend' : 'click', function () {
             cards.firstElementChild.removeChild(cards.firstElementChild.firstElementChild);
-        }
+        });
     }());
 </script>
 </body>
