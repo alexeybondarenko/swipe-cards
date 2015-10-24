@@ -1,10 +1,7 @@
 (function () { 'use strict';
 
-    var SwipeCards = function (el, options) {
-        this.el = el;
+    var SwipeCards = function () {
         this.container = el.querySelector('.swipe-cards__wrap');
-
-        this.options = options;
         console.log(this, parent);
         this.init ();
     };
@@ -25,8 +22,6 @@
             // listen events
             var $items = this.container.querySelectorAll('.swipe-cards__item');
             var itemsArr = Array.prototype.slice.call($items, 0);
-            var onMoveStart = this.onMoveStart,
-                onMoveUpdate = this.onMoveUpdate;
 
             var isTouchDevice = !!('ontouchstart' in window);
 
@@ -96,7 +91,7 @@
     };
 
     var cards = document.querySelector('.swipe-cards');
-    var swipeCards = new SwipeCards(cards, null);
+    new SwipeCards(cards);
 
     document.querySelector('.btn-add').onclick = function () {
         var newCard = document.createElement('div');
