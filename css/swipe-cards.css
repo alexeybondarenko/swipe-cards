@@ -54,7 +54,9 @@ button, input, textarea {
   .swipe-cards .swipe-cards__wrap {
     width: 100%;
     height: 100%;
-    position: relative; }
+    position: relative;
+    transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0%; }
   .swipe-cards .swipe-cards__item {
     position: absolute;
     top: 20px;
@@ -72,85 +74,60 @@ button, input, textarea {
     transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
     -webkit-transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
     opacity: 0; }
+    .swipe-cards .swipe-cards__item.is-active {
+      transition: none;
+      -webkit-transition: none; }
+    .swipe-cards .swipe-cards__item.is-deleted {
+      transition-duration: 0.3s; }
     .swipe-cards .swipe-cards__item:nth-child(9) {
       opacity: 1;
       transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
       -webkit-transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
       z-index: 1; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(8) {
       opacity: 1;
       transform: scale3d(0.55414, 0.55414, 1) translate3d(0, -70px, 0);
       -webkit-transform: scale3d(0.55414, 0.55414, 1) translate3d(0, -70px, 0);
       z-index: 2; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(7) {
       opacity: 1;
       transform: scale3d(0.61783, 0.61783, 1) translate3d(0, -60px, 0);
       -webkit-transform: scale3d(0.61783, 0.61783, 1) translate3d(0, -60px, 0);
       z-index: 3; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(6) {
       opacity: 1;
       transform: scale3d(0.68153, 0.68153, 1) translate3d(0, -50px, 0);
       -webkit-transform: scale3d(0.68153, 0.68153, 1) translate3d(0, -50px, 0);
       z-index: 4; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(5) {
       opacity: 1;
       transform: scale3d(0.74522, 0.74522, 1) translate3d(0, -40px, 0);
       -webkit-transform: scale3d(0.74522, 0.74522, 1) translate3d(0, -40px, 0);
       z-index: 5; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(4) {
       opacity: 1;
       transform: scale3d(0.80892, 0.80892, 1) translate3d(0, -30px, 0);
       -webkit-transform: scale3d(0.80892, 0.80892, 1) translate3d(0, -30px, 0);
       z-index: 6; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(3) {
       opacity: 1;
       transform: scale3d(0.87261, 0.87261, 1) translate3d(0, -20px, 0);
       -webkit-transform: scale3d(0.87261, 0.87261, 1) translate3d(0, -20px, 0);
       z-index: 7; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(2) {
       opacity: 1;
       transform: scale3d(0.93631, 0.93631, 1) translate3d(0, -10px, 0);
       -webkit-transform: scale3d(0.93631, 0.93631, 1) translate3d(0, -10px, 0);
       z-index: 8; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(1) {
       opacity: 1;
       transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
       -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
       z-index: 9; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
     .swipe-cards .swipe-cards__item:nth-child(0) {
       opacity: 1;
       transform: scale3d(1.06369, 1.06369, 1) translate3d(0, 10px, 0);
       -webkit-transform: scale3d(1.06369, 1.06369, 1) translate3d(0, 10px, 0);
       z-index: 10; }
-    .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
 
 /*# sourceMappingURL=swipe-cards.css.map */

@@ -56,6 +56,8 @@ button,input,textarea
     width: 100%
     height: 100%
     position: relative
+    transform-origin: 50% 0%
+    -webkit-transform-origin: 50% 0%
   .swipe-cards__item
     position: absolute
     top: 20px
@@ -85,6 +87,11 @@ button,input,textarea
     +n-element(1, $max-count, $offset)
     opacity: 0
 
+    &.is-active
+      transition: none
+      -webkit-transition: none
+    &.is-deleted
+      transition-duration: .3s
     @for $i from 1 through $max-count
       &:nth-child(#{$max-count - $i})
         opacity: 1
@@ -92,9 +99,6 @@ button,input,textarea
         +n-element($i, $max-count, $offset)
         z-index: $i
 
-      &.is-active
-        transition: none
-        -webkit-transition: none
 
     //&:nth-child(4n)
     //  transform: scale3d(.7,.7,1) translate3d(0, -24px, 0)

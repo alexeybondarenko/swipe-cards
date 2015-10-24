@@ -64,6 +64,7 @@
                 x: point.clientX,
                 y: point.clientY
             };
+            this.offset = this.getOffset(point);
             this.activeEl = point.target;
             this.activeEl.classList.add('is-active');
         },
@@ -72,22 +73,33 @@
             if (!this.startPoint) return;
             e.stopPropagation();
             e.preventDefault();
-            var offset = this.offset;
-            var containerWidth = this.container.clientWidth;
+            var containerWidth = this.container.clientWidth,
+                containerHeight = this.container.clientHeight;
 
+            var activeEl = this.activeEl;
             this.activeEl.classList.remove('is-active'); // to enable transitions animations
-            if (Math.abs(offset.x) > .5 * containerWidth) {
+            if (Math.abs(this.offset.x) > .5 * containerWidth) {
                 // delete
-                this.activeEl.parentNode.removeChild(this.activeEl);
+                this.activeEl.classList.add('is-deleted');
+                this.activeEl.style.transform = this.activeEl.style.webkitTransform = 'rotate('+(this.offset.x > 1 ? -1 : 1) * 25+'deg) translate3d(' + [(this.offset.x > 1 ? 1 : -1)  * 2 * containerWidth + 'px', -1 * containerHeight + 'px', 0].join(',') +')';
+                setTimeout(function (activeEl) {
+                    activeEl.parentNode.removeChild(activeEl);
+                }, 300, activeEl);
+
             } else {
                 // revert back
                 this.activeEl.style.transform = this.activeEl.style.webkitTransform = null;
             }
+            this.container.style.transform = null;
             this.clear();
         },
         onMoveUpdate: function (e) {
             if (!this.startPoint) return;
             this.offset = this.getOffset(this.getEventPoint(e));
+            //var k = 2 * Math.abs(this.offset.x) / (this.container.clientWidth);
+            //k = k > 1 ? 1 : k;
+            //var scale  = (1.05 - 1) * k + 1;
+            //this.container.style.transform = this.container.style.webkitTransform = 'scale3d('+[scale, scale, 1].join(',')+')';
             this.activeEl.style.transform = this.activeEl.style.webkitTransform = this.getTransformByOffset(this.offset);
             console.log('update');
         }
