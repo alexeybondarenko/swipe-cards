@@ -78,7 +78,7 @@
 
             var activeEl = this.activeEl;
             this.activeEl.classList.remove('is-active'); // to enable transitions animations
-            if (Math.abs(this.offset.x) > .4 * containerWidth) {
+            if (Math.abs(this.offset.x) > .3 * containerWidth) {
                 // delete
                 this.activeEl.classList.add('is-deleted');
                 this.activeEl.style.transform = this.activeEl.style.webkitTransform = 'rotate('+(this.offset.x > 1 ? -1 : 1) * 25+'deg) translate3d(' + [(this.offset.x > 1 ? 1 : -1)  * 2 * containerWidth + 'px', -1 * containerHeight + 'px', 0].join(',') +')';
