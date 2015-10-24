@@ -1,6 +1,7 @@
 (function () { 'use strict';
 
-    var SwipeCards = function () {
+    var SwipeCards = function (el) {
+        if (!el) return;
         this.container = el.querySelector('.swipe-cards__wrap');
         console.log(this, parent);
         this.init ();
@@ -90,16 +91,5 @@
         }
     };
 
-    var cards = document.querySelector('.swipe-cards');
-    new SwipeCards(cards);
-
-    document.querySelector('.btn-add').onclick = function () {
-        var newCard = document.createElement('div');
-        newCard.classList.add('swipe-cards__item');
-        var container = cards.firstElementChild;
-        container.insertBefore(newCard, container.firstElementChild);
-    };
-    document.querySelector('.btn-delete').onclick = function () {
-        cards.firstElementChild.removeChild(cards.firstElementChild.firstElementChild);
-    }
+    window.SwipeCards = SwipeCards;
 })();

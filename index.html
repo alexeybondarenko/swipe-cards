@@ -37,5 +37,22 @@
     </div>
 </div>
 <script src="js/swipe-cards.js"></script>
+<script>
+    (function () {
+        // initialize
+        var cards = document.querySelector('.swipe-cards');
+        new SwipeCards(cards);
+
+        document.querySelector('.btn-add').onclick = function () {
+            var newCard = document.createElement('div');
+            newCard.classList.add('swipe-cards__item');
+            var container = cards.firstElementChild;
+            container.insertBefore(newCard, container.firstElementChild);
+        };
+        document.querySelector('.btn-delete').onclick = function () {
+            cards.firstElementChild.removeChild(cards.firstElementChild.firstElementChild);
+        }
+    }());
+</script>
 </body>
 </html>
