@@ -31,6 +31,8 @@
     Array.prototype.slice.call(document.querySelectorAll('.flip')).forEach(function(el) {
         addListnersForFlip(el)
     });
-    addNewCard()
+
+    addNewCard();
+    addNewCard();
 
 }());
