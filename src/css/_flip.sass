@@ -1,0 +1,24 @@
+.flip
+  position: relative
+  perspective: 1000
+  &.is-flipped
+    .flip__wrap
+      transform: rotateY(180deg)
+  .flip__wrap
+    height: 100%
+    transition: .6s
+    transform-style: preserve-3d
+    position: relative
+    animation-fill-mode: forwards
+  .flip__front, .flip__back
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    backface-visibility: hidden
+  .flip__front
+    z-index: 2
+    transform: rotateY(0deg)
+  .flip__back
+    transform: rotateY(-180deg)

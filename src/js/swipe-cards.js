@@ -66,13 +66,13 @@
             };
             this.offset = this.getOffset(point);
             this.activeEl = this.container.firstElementChild;
-            this.activeEl.classList.add('is-active');
         },
         onMoveEnd: function (e) {
             console.log('onMoveEnd', e);
             if (!this.startPoint) return;
             e.stopPropagation();
             e.preventDefault();
+
             var containerWidth = this.container.clientWidth,
                 containerHeight = this.container.clientHeight;
 
@@ -95,6 +95,7 @@
         },
         onMoveUpdate: function (e) {
             if (!this.startPoint) return;
+            this.activeEl.classList.add('is-active');
             this.offset = this.getOffset(this.getEventPoint(e));
             this.activeEl.style.transform = this.activeEl.style.webkitTransform = this.getTransformByOffset(this.offset);
             console.log('update');
