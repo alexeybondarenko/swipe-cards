@@ -16,7 +16,7 @@
             this.offset = null;
         },
         isActiveElement: function (el) {
-            return this.container.firstElementChild.isEqualNode(el);
+            return this.container.firstElementChild.isEqualNode(el) || this.container.firstElementChild.contains(el);
         },
         init:  function () {
             console.log('init swipe-cards');
@@ -65,14 +65,14 @@
                 y: point.clientY
             };
             this.offset = this.getOffset(point);
-            this.activeEl = point.target;
-            this.activeEl.classList.add('is-active');
+            this.activeEl = this.container.firstElementChild;
         },
         onMoveEnd: function (e) {
             console.log('onMoveEnd', e);
             if (!this.startPoint) return;
             e.stopPropagation();
             e.preventDefault();
+
             var containerWidth = this.container.clientWidth,
                 containerHeight = this.container.clientHeight;
 
@@ -95,11 +95,8 @@
         },
         onMoveUpdate: function (e) {
             if (!this.startPoint) return;
+            this.activeEl.classList.add('is-active');
             this.offset = this.getOffset(this.getEventPoint(e));
-            //var k = 2 * Math.abs(this.offset.x) / (this.container.clientWidth);
-            //k = k > 1 ? 1 : k;
-            //var scale  = (1.05 - 1) * k + 1;
-            //this.container.style.transform = this.container.style.webkitTransform = 'scale3d('+[scale, scale, 1].join(',')+')';
             this.activeEl.style.transform = this.activeEl.style.webkitTransform = this.getTransformByOffset(this.offset);
             console.log('update');
         }

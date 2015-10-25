@@ -1,30 +1,30 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\000034}}
 body {
   background-color: #2f3845;
   font: 200 13px/1.4 "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
   padding: 20px;
   overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\000039}}
 button, input, textarea {
   font: 200 13px/1.4 "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000311}}
 .title {
   margin: 20px 0 5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000313}}
 .subtitle {
   margin: 5px 0 5px;
   text-align: center;
   font-weight: 300; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000317}}
 .wrap {
   box-sizing: border-box;
   text-align: center;
   color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000321}}
   .wrap .wrap__swipe {
     position: absolute;
     top: 100px;
@@ -34,7 +34,7 @@ button, input, textarea {
     right: 0;
     margin: auto;
     color: black; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000331}}
   .wrap .wrap__btns {
     position: absolute;
     bottom: 20px;
@@ -42,7 +42,7 @@ button, input, textarea {
     left: 0;
     right: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000338}}
 .btn {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -51,19 +51,23 @@ button, input, textarea {
   padding: 10px 20px;
   background: transparent;
   border-radius: 4px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000344}}
   .btn:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.05); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/app\.sass}line{font-family:\0000348}}
+#swipe-card-origin {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\000033}}
 .swipe-cards {
   position: relative;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   padding-top: 40px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000310}}
   .swipe-cards .swipe-cards__wrap {
     width: 100%;
     height: 100%;
@@ -71,89 +75,151 @@ button, input, textarea {
     -ms-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
     -webkit-transform-origin: 50% 0%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000316}}
   .swipe-cards .swipe-cards__item {
     position: absolute;
     top: 20px;
     left: 20px;
     right: 20px;
     bottom: 20px;
-    background: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
     z-index: -1;
     -ms-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
     -webkit-transform-origin: 50% 0%;
-    transition: transform 0.6s ease-in;
-    -webkit-transition: -webkit-transform 0.6s ease-in;
-    transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
-    -webkit-transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    -webkit-transform: scale3d(0.57537, 0.57537, 1) translate3d(0, -40px, 0);
+    transform: scale3d(0.57537, 0.57537, 1) translate3d(0, -40px, 0);
     opacity: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000339}}
     .swipe-cards .swipe-cards__item.is-active {
-      transition: none;
-      -webkit-transition: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000393}}
+      transition: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000341}}
     .swipe-cards .swipe-cards__item.is-deleted {
-      transition-duration: 0.3s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
-    .swipe-cards .swipe-cards__item:nth-child(9) {
-      opacity: 1;
-      transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
-      -webkit-transform: scale3d(0.49045, 0.49045, 1) translate3d(0, -80px, 0);
-      z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
-    .swipe-cards .swipe-cards__item:nth-child(8) {
-      opacity: 1;
-      transform: scale3d(0.55414, 0.55414, 1) translate3d(0, -70px, 0);
-      -webkit-transform: scale3d(0.55414, 0.55414, 1) translate3d(0, -70px, 0);
-      z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
-    .swipe-cards .swipe-cards__item:nth-child(7) {
-      opacity: 1;
-      transform: scale3d(0.61783, 0.61783, 1) translate3d(0, -60px, 0);
-      -webkit-transform: scale3d(0.61783, 0.61783, 1) translate3d(0, -60px, 0);
-      z-index: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
-    .swipe-cards .swipe-cards__item:nth-child(6) {
-      opacity: 1;
-      transform: scale3d(0.68153, 0.68153, 1) translate3d(0, -50px, 0);
-      -webkit-transform: scale3d(0.68153, 0.68153, 1) translate3d(0, -50px, 0);
-      z-index: 4; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
+      transition-duration: 0.2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
     .swipe-cards .swipe-cards__item:nth-child(5) {
       opacity: 1;
-      transform: scale3d(0.74522, 0.74522, 1) translate3d(0, -40px, 0);
-      -webkit-transform: scale3d(0.74522, 0.74522, 1) translate3d(0, -40px, 0);
-      z-index: 5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
+      -webkit-transform: scale3d(0.57537, 0.57537, 1) translate3d(0, -40px, 0);
+      transform: scale3d(0.57537, 0.57537, 1) translate3d(0, -40px, 0);
+      z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
     .swipe-cards .swipe-cards__item:nth-child(4) {
       opacity: 1;
-      transform: scale3d(0.80892, 0.80892, 1) translate3d(0, -30px, 0);
-      -webkit-transform: scale3d(0.80892, 0.80892, 1) translate3d(0, -30px, 0);
-      z-index: 6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
+      -webkit-transform: scale3d(0.68153, 0.68153, 1) translate3d(0, -30px, 0);
+      transform: scale3d(0.68153, 0.68153, 1) translate3d(0, -30px, 0);
+      z-index: 2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
     .swipe-cards .swipe-cards__item:nth-child(3) {
       opacity: 1;
-      transform: scale3d(0.87261, 0.87261, 1) translate3d(0, -20px, 0);
-      -webkit-transform: scale3d(0.87261, 0.87261, 1) translate3d(0, -20px, 0);
-      z-index: 7; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
+      -webkit-transform: scale3d(0.78769, 0.78769, 1) translate3d(0, -20px, 0);
+      transform: scale3d(0.78769, 0.78769, 1) translate3d(0, -20px, 0);
+      z-index: 3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
     .swipe-cards .swipe-cards__item:nth-child(2) {
       opacity: 1;
-      transform: scale3d(0.93631, 0.93631, 1) translate3d(0, -10px, 0);
-      -webkit-transform: scale3d(0.93631, 0.93631, 1) translate3d(0, -10px, 0);
-      z-index: 8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
+      -webkit-transform: scale3d(0.89384, 0.89384, 1) translate3d(0, -10px, 0);
+      transform: scale3d(0.89384, 0.89384, 1) translate3d(0, -10px, 0);
+      z-index: 4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
     .swipe-cards .swipe-cards__item:nth-child(1) {
       opacity: 1;
-      transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
       -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
-      z-index: 9; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000396}}
+      transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
+      z-index: 5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_swipe-cards\.sass}line{font-family:\0000344}}
     .swipe-cards .swipe-cards__item:nth-child(0) {
       opacity: 1;
-      transform: scale3d(1.06369, 1.06369, 1) translate3d(0, 10px, 0);
-      -webkit-transform: scale3d(1.06369, 1.06369, 1) translate3d(0, 10px, 0);
-      z-index: 10; }
+      -webkit-transform: scale3d(1.10616, 1.10616, 1) translate3d(0, 10px, 0);
+      transform: scale3d(1.10616, 1.10616, 1) translate3d(0, 10px, 0);
+      z-index: 6; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\000031}}
+.ticket {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\000036}}
+  .ticket .ticket__poster, .ticket .ticket__content {
+    border-radius: 4px;
+    overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000310}}
+  .ticket .ticket__poster {
+    overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000312}}
+  .ticket .ticket__photo {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000316}}
+    .ticket .ticket__photo img {
+      min-width: 100%;
+      min-height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000322}}
+  .ticket .ticket__title {
+    text-align: left;
+    padding: 20px 20px 10px;
+    box-sizing: border-box; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000326}}
+  .ticket .ticket__photo + .ticket__title {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: 0.85px;
+    position: relative;
+    top: -60px;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.4)); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000336}}
+  .ticket .ticket__content {
+    background-color: #fafef7; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000338}}
+  .ticket .ticket__text {
+    padding: 20px 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000341}}
+    .ticket .ticket__text h1 {
+      margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000343}}
+    .ticket .ticket__text h2 {
+      font-weight: 400;
+      margin-top: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_ticket\.sass}line{font-family:\0000346}}
+    .ticket .ticket__text p {
+      text-align: justify; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_flip\.sass}line{font-family:\000031}}
+.flip {
+  position: relative;
+  -webkit-perspective: 1000;
+  perspective: 1000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_flip\.sass}line{font-family:\000035}}
+  .flip.is-flipped .flip__wrap {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_flip\.sass}line{font-family:\000037}}
+  .flip .flip__wrap {
+    height: 100%;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_flip\.sass}line{font-family:\0000313}}
+  .flip .flip__front, .flip .flip__back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_flip\.sass}line{font-family:\0000320}}
+  .flip .flip__front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alexeybondarenko\/Sites\/swipe-cards\/src\/css\/_flip\.sass}line{font-family:\0000323}}
+  .flip .flip__back {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
