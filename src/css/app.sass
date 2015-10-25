@@ -1,1 +1,50 @@
+
+=f-sserif
+  font: 200 13px/1.4 'Helvetica Neue',Helvetica,Arial,Verdana, sans-serif
+body
+  background-color: #2f3845
+  +f-sserif
+  padding: 20px
+  overflow: hidden
+button,input,textarea
+  +f-sserif
+.title
+  margin: 20px 0 5px
+.subtitle
+  margin: 5px 0 5px
+  text-align: center
+  font-weight: 300
+.wrap
+  box-sizing: border-box
+  text-align: center
+  color: white
+  .wrap__swipe
+    position: absolute
+    top: 100px
+    bottom: 60px
+    max-width: 400px
+    left: 0
+    right: 0
+    margin: auto
+
+    color: black
+  .wrap__btns
+    position: absolute
+    bottom: 20px
+    margin: 0 auto
+    left: 0
+    right: 0
+//overflow: hidden
+.btn
+  appearance: none
+  border: 1px solid white
+  padding: 10px 20px
+  background: transparent
+  border-radius: 4px
+  &:focus
+    outline: none
+    background: rgba(white, .05)
+
+
 @import swipe-cards
+@import ticket
