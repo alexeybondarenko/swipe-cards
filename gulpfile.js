@@ -100,6 +100,19 @@ gulp.task('watch', function() {
     gulp.watch('./src/bower_components/**/*.js', ['copy-bower']);
     gulp.watch('./src/static/**/*', ['copy-statics']);
 });
+
+// Deploy gh-pages
+gulp.task('deploy-prefix', function() {
+  return gulp.src('./www/**/*.html')
+    .pipe(prefix('/swipe-cards'))
+    .pipe(gulp.dest('./www'));
+});
+
+gulp.task('deploy', ['deploy-prefix'], function() {
+  return gulp.src('./www/**/*')
+    .pipe(ghPages());
+});
+
 // Base tasks
 gulp.task('default', sequence('build', ['server', 'watch']));
 gulp.task('build', sequence('clean', ['copy-bower','copy-images','copy-statics', 'copy-scripts', 'build-styles']));
