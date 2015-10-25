@@ -82,7 +82,7 @@ gulp.task('copy-statics', function() {
 
 // Scripts
 gulp.task('copy-scripts', function() {
-    return gulp.src(['./src/scripts/**/*'], {base: './src'})
+    return gulp.src(['./src/js/**/*'], {base: './src'})
         .pipe(gulp.dest('./www'));
 });
 
@@ -96,9 +96,9 @@ gulp.task('copy-bower', function() {
 gulp.task('watch', function() {
     gulp.watch('./src/css/**/*', ['build-styles']);
     gulp.watch('./src/images/**/*', ['copy-images', 'build-styles']);
-    gulp.watch('./src/scripts/**/*', ['copy-scripts']);
+    gulp.watch('./src/js/**/*', ['copy-scripts']);
     gulp.watch('./src/bower_components/**/*.js', ['copy-bower']);
-    gulp.watch('./src/static/**/*', ['copy-static']);
+    gulp.watch('./src/static/**/*', ['copy-statics']);
 });
 // Base tasks
 gulp.task('default', sequence('build', ['server', 'watch']));
