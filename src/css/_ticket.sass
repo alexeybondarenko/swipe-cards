@@ -2,8 +2,14 @@
   width: 100%
   height: 100%
   overflow: hidden
-  .ticket__header
+  position: relative
+  .ticket__front, .ticket__back
     height: 100%
+    position: absolute
+    top: 0
+    left: 0
+  .ticket__back
+    display: none
   .ticket__photo
     min-height: 100%
     min-width: 100%
